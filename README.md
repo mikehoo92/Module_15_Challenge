@@ -1,8 +1,6 @@
-# Module_15_Challenge
-# Algorithmic Trading
-## Trading Bots & Trading Signals
+# AWS - Robo Advisor Bot
 
-This notebook helps enhance existing trading signals with machine learning algorithms that can adapt to new data. With that being said we will create an algorithmic trading bot that learns and adapts to new data and evolving markets by implementing an algorithmic trading strategy that uses machine learning to automate the trade decisions, adjust the input parameters to optimize the trading algorithm, and train a new machine learning model and compare its performance to that of a baseline model.
+This repository outlines how we can create a bot that will recommend an investment portfolio for a retirement plan. To do this we will configure the initial robo advisor by defining an Amazon Lex bot. Then we will build and test the robo advisor bot, making sure the bot works and accurately responds during the conversation with the user. Finally we will enhance the robo advisor with an Amazon Lambda function to validate the user's input and return the investment portfolio recommendation. 
 
 ---
 
