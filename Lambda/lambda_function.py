@@ -27,6 +27,50 @@ def build_validation_result(is_valid, violated_slot, message_content):
     }
 
 
+
+#Adding in the Validation Data Function for Age and Investment Amount
+def validate_data(age, dollars, intent_request):
+    """
+    Validates the data provided by the user.
+    """
+
+    # Validate that the user is between 0 and 65 years old
+    if age is not None:
+        birth_date = datetime.strptime(age, "%Y-%m-%d")
+        age = relativedelta(datetime.now(), birth_date).years
+        if age >= 0 and age <= 65:
+            return build_validation_result(
+                True,
+                "age",
+                "Thank you for confirming your age, ",
+            )
+            else age > 65:
+                return build_validation_result(
+                False,
+                "age",
+                "You should be younger than 65 years old to use this service, "
+                "please provide a different date of birth.",
+            )
+            
+
+            
+    # Validate the investment amount, it should be > 5000
+    if investmentamount is not None:
+        dollars = parse_float(
+            dollars
+        )  # Since parameters are strings it's important to cast values
+        if investmentamount < 5000:
+            return build_validation_result(
+                False,
+                "dollars",
+                "The amount to convert should be greater than five thousand, "
+                "please provide a correct amount in dollars to convert.",
+                )
+
+    # A True results is returned if age or investmentamount are valid
+    return build_validation_result(True, None, None)
+
+
 ### Dialog Actions Helper Functions ###
 def get_slots(intent_request):
     """
