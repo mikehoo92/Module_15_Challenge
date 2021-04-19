@@ -33,6 +33,8 @@ from dateutil.relativedelta import relativedelta
 
 I created the Bot and intially tested it. I then began to create the lambda function code. I got as far as _Step 3: Enhance the Robo Advisor with an Amazon Lambda Function, #4 Complete the starter code so that once the intent is fulfilled, the bot responds with an investment recommendation based on the selected risk level, as follows_ before not continuing. I added the 4 test events in AWS. I did not test however due to issues with the code. 
 
+Screen recording is found on the main branch as roboadvisor_test_screenrecording.mov
+
 ---
 
 ## Contributors
